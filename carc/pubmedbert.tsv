@@ -1,0 +1,3 @@
+# name	data (under data/)	train_splits	select_on
+pubmedbert20-author	topk/pubmedbert20	train,dev	test
+pubmedbert20-clean	topk/pubmedbert20	train	dev

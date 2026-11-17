@@ -1,0 +1,3 @@
+# name	data (under data/)	train_splits	select_on
+nli-top20-author	topk/top20	train,dev	test
+nli-top20-clean	topk/top20	train	dev

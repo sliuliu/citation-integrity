@@ -1,0 +1,65 @@
+{
+  "argv": [
+    "train_multivers.py",
+    "--data-dir",
+    "../data/oracle/goldctx-A",
+    "--init",
+    "../checkpoints/multivers/healthver-state.ckpt",
+    "--train-splits",
+    "train",
+    "--eval-splits",
+    "dev,test",
+    "--select-on",
+    "dev",
+    "--seed",
+    "2",
+    "--save",
+    "none",
+    "--out-dir",
+    "../runs/oracle-goldctx-A-clean-s2-13480558"
+  ],
+  "args": {
+    "data_dir": "../data/oracle/goldctx-A",
+    "init": "../checkpoints/multivers/healthver-state.ckpt",
+    "out_dir": "../runs/oracle-goldctx-A-clean-s2-13480558",
+    "train_splits": "train",
+    "eval_splits": "dev,test",
+    "select_on": "dev",
+    "epochs": 5,
+    "lr": 1e-05,
+    "accumulate": 8,
+    "warmup": 0.1,
+    "label_weighting": "author",
+    "seed": 2,
+    "eval_batch_size": 2,
+    "gradient_checkpointing": false,
+    "save": "none",
+    "freeze_encoder": false,
+    "limit": null,
+    "device": "cuda"
+  },
+  "init_sha256": "10d3408f65914a3062dea4396b4f87df7b865a05bf52767aaed9a4534ca9288c",
+  "init_vocab": 50275,
+  "vocab": 50278,
+  "n_train": 2138,
+  "train_label_counts": {
+    "NOT_ACCURATE": 629,
+    "IRRELEVANT": 143,
+    "ACCURATE": 1366
+  },
+  "label_weights": {
+    "NOT_ACCURATE": 2.1717011128775834,
+    "IRRELEVANT": 9.552447552447552,
+    "ACCURATE": 1.0
+  },
+  "steps_per_epoch": 268,
+  "total_steps": 1340,
+  "data_sha256": {
+    "claims_dev.jsonl": "bacada37e1a6a7c6d6b55faf8b6c5619ca63faeec6ca5964b395c630b2264111",
+    "claims_test.jsonl": "87d3eab45ecc7f5274f028bdbc85d52d828d1f13a64f540337178ebef06e6df4",
+    "claims_train.jsonl": "3260b193b0a1def3061691cc917c98747ff7baf5e12c669b6694ab619edab029",
+    "corpus.jsonl": "f0203e5f3c5e84fb541adb3fcf5041d9bfcde2e2acce626e40a1ebfc6ac4365e"
+  },
+  "torch": "2.0.1+cu118",
+  "gpu": "NVIDIA A40"
+}

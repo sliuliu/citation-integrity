@@ -1,0 +1,6 @@
+{
+  "best_epoch_by": "dev",
+  "best_epoch": 3,
+  "best_score": 0.5138447971781305,
+  "peak_cuda_gib": 13.78
+}

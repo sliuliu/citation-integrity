@@ -1,0 +1,22 @@
+# Environments, caches and model weights (rebuilt by carc/setup_*.sh)
+.venv*/
+.runtime/
+.hf-cache/
+.work/
+__pycache__/
+checkpoints/
+
+# Third-party code and data (cloned, see README.md)
+upstream/
+external/
+
+# Derived data (rebuilt by the scripts, see README.md)
+data/
+
+# Bundles copied to CARC, job logs, earlier exploratory results
+*.tgz
+logs/
+archive/
+
+# Raw Slurm logs (contain cluster paths and user names)
+runs/carc-logs/

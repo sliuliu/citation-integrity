@@ -1,0 +1,58 @@
+{
+  "argv": [
+    "train_nli.py",
+    "--data-dir",
+    "../data/topk/top20",
+    "--train-splits",
+    "train,dev",
+    "--eval-splits",
+    "dev,test",
+    "--select-on",
+    "test",
+    "--seed",
+    "2",
+    "--save",
+    "none",
+    "--out-dir",
+    "../runs/nli-top20-author-s2-13588236"
+  ],
+  "args": {
+    "data_dir": "../data/topk/top20",
+    "model": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "out_dir": "../runs/nli-top20-author-s2-13588236",
+    "train_splits": "train,dev",
+    "eval_splits": "dev,test",
+    "select_on": "test",
+    "epochs": 5,
+    "lr": 1e-05,
+    "batch_size": 16,
+    "micro_batch": 4,
+    "warmup": 0.1,
+    "weight_decay": 0.01,
+    "max_length": 512,
+    "label_weighting": "author",
+    "seed": 2,
+    "save": "none",
+    "limit": null,
+    "device": "cuda"
+  },
+  "head_order": [
+    2,
+    1,
+    0
+  ],
+  "n_train": 2454,
+  "train_label_counts": {
+    "NOT_ACCURATE": 730,
+    "IRRELEVANT": 167,
+    "ACCURATE": 1557
+  },
+  "label_weights": {
+    "NOT_ACCURATE": 2.132876712328767,
+    "IRRELEVANT": 9.323353293413174,
+    "ACCURATE": 1.0
+  },
+  "total_steps": 770,
+  "torch": "2.0.1+cu118",
+  "gpu": "NVIDIA A40"
+}

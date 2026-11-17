@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "predict_multivers.py",
+    "--checkpoint",
+    "../checkpoints/author/bestModel-inference.ckpt",
+    "--data-dir",
+    "../data/topk/random20",
+    "--split",
+    "test",
+    "--out-dir",
+    "../runs/04-released-ckpt-random20-test",
+    "--precision",
+    "fp16"
+  ],
+  "checkpoint_sha256": "6463adff198d9ef4127e09501c914fa5cdcf05c5e1aa8106a7d2a29d38ae4134",
+  "claims_sha256": "ab0692fae3dc6a2cd37f7c7569d077d77e4813574023e38f4c1f0aa58909d495",
+  "corpus_sha256": "2df4b9c969b8905c753975ec29246c4e43b449df193bc142370023ae5ac4eba2",
+  "n_predicted": 606,
+  "seconds": 397.5,
+  "peak_cuda_gib": 1.53,
+  "torch": "2.0.1+cu118",
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU"
+}

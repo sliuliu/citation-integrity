@@ -1,0 +1,65 @@
+{
+  "argv": [
+    "train_multivers.py",
+    "--data-dir",
+    "../data/topk/pubmedbert20",
+    "--init",
+    "../checkpoints/multivers/healthver-state.ckpt",
+    "--train-splits",
+    "train,dev",
+    "--eval-splits",
+    "dev,test",
+    "--select-on",
+    "test",
+    "--seed",
+    "76",
+    "--save",
+    "best",
+    "--out-dir",
+    "../runs/pubmedbert20-author-13517493"
+  ],
+  "args": {
+    "data_dir": "../data/topk/pubmedbert20",
+    "init": "../checkpoints/multivers/healthver-state.ckpt",
+    "out_dir": "../runs/pubmedbert20-author-13517493",
+    "train_splits": "train,dev",
+    "eval_splits": "dev,test",
+    "select_on": "test",
+    "epochs": 5,
+    "lr": 1e-05,
+    "accumulate": 8,
+    "warmup": 0.1,
+    "label_weighting": "author",
+    "seed": 76,
+    "eval_batch_size": 2,
+    "gradient_checkpointing": false,
+    "save": "best",
+    "freeze_encoder": false,
+    "limit": null,
+    "device": "cuda"
+  },
+  "init_sha256": "10d3408f65914a3062dea4396b4f87df7b865a05bf52767aaed9a4534ca9288c",
+  "init_vocab": 50275,
+  "vocab": 50278,
+  "n_train": 2454,
+  "train_label_counts": {
+    "NOT_ACCURATE": 730,
+    "IRRELEVANT": 167,
+    "ACCURATE": 1557
+  },
+  "label_weights": {
+    "NOT_ACCURATE": 2.132876712328767,
+    "IRRELEVANT": 9.323353293413174,
+    "ACCURATE": 1.0
+  },
+  "steps_per_epoch": 307,
+  "total_steps": 1535,
+  "data_sha256": {
+    "claims_dev.jsonl": "52ea0785d06e6b4843ec8b44cf8ee52c1f5d419403ef37f1de499677c154a180",
+    "claims_test.jsonl": "ab0692fae3dc6a2cd37f7c7569d077d77e4813574023e38f4c1f0aa58909d495",
+    "claims_train.jsonl": "45b3e821832595c393e819d1177e7bb82a130bd368e78de0057a31a65919baab",
+    "corpus.jsonl": "b5723eef9f023d186546540914fa59543f15c8289294fbc23178d45ed96486a5"
+  },
+  "torch": "2.0.1+cu118",
+  "gpu": "NVIDIA A40"
+}

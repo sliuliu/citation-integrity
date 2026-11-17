@@ -1,0 +1,7 @@
+# name	data (under data/)	train_splits	select_on
+oracle-citance-B-author	oracle/citance-B	train,dev	test
+oracle-citance-A-author	oracle/citance-A	train,dev	test
+oracle-citance-B-clean	oracle/citance-B	train	dev
+oracle-citance-A-clean	oracle/citance-A	train	dev
+oracle-goldctx-B-author	oracle/goldctx-B	train,dev	test
+oracle-goldctx-A-clean	oracle/goldctx-A	train	dev

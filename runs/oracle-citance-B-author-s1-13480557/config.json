@@ -1,0 +1,65 @@
+{
+  "argv": [
+    "train_multivers.py",
+    "--data-dir",
+    "../data/oracle/citance-B",
+    "--init",
+    "../checkpoints/multivers/healthver-state.ckpt",
+    "--train-splits",
+    "train,dev",
+    "--eval-splits",
+    "dev,test",
+    "--select-on",
+    "test",
+    "--seed",
+    "1",
+    "--save",
+    "none",
+    "--out-dir",
+    "../runs/oracle-citance-B-author-s1-13480557"
+  ],
+  "args": {
+    "data_dir": "../data/oracle/citance-B",
+    "init": "../checkpoints/multivers/healthver-state.ckpt",
+    "out_dir": "../runs/oracle-citance-B-author-s1-13480557",
+    "train_splits": "train,dev",
+    "eval_splits": "dev,test",
+    "select_on": "test",
+    "epochs": 5,
+    "lr": 1e-05,
+    "accumulate": 8,
+    "warmup": 0.1,
+    "label_weighting": "author",
+    "seed": 1,
+    "eval_batch_size": 2,
+    "gradient_checkpointing": false,
+    "save": "none",
+    "freeze_encoder": false,
+    "limit": null,
+    "device": "cuda"
+  },
+  "init_sha256": "10d3408f65914a3062dea4396b4f87df7b865a05bf52767aaed9a4534ca9288c",
+  "init_vocab": 50275,
+  "vocab": 50278,
+  "n_train": 2454,
+  "train_label_counts": {
+    "NOT_ACCURATE": 393,
+    "IRRELEVANT": 504,
+    "ACCURATE": 1557
+  },
+  "label_weights": {
+    "NOT_ACCURATE": 3.9618320610687023,
+    "IRRELEVANT": 3.0892857142857144,
+    "ACCURATE": 1.0
+  },
+  "steps_per_epoch": 307,
+  "total_steps": 1535,
+  "data_sha256": {
+    "claims_dev.jsonl": "31cd9b43789edb71e8745ad42fbd0388481121cfa270d42e50320c406e4b5bec",
+    "claims_test.jsonl": "3a0a55837a38adb3dcc9fa89d7f8f2b03ce57f34b5adb0ad27ae2e0c2cfa4448",
+    "claims_train.jsonl": "6fa4f67dd762f86c053016c686365184f8b40c6e88071fa444635171dd18bc70",
+    "corpus.jsonl": "f0203e5f3c5e84fb541adb3fcf5041d9bfcde2e2acce626e40a1ebfc6ac4365e"
+  },
+  "torch": "2.0.1+cu118",
+  "gpu": "NVIDIA A40"
+}

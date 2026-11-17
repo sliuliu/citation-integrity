@@ -1,0 +1,5 @@
+# name	data (under data/)	train_splits	select_on
+topk20-author	topk/top20	train,dev	test
+topk5-author	topk/top5	train,dev	test
+topk20-clean	topk/top20	train	dev
+topk5-clean	topk/top5	train	dev
