@@ -332,7 +332,7 @@ gpt-oss - released +0.093 [+0.035, +0.156], MedGemma - released -0.007 [-0.071, 
 
 ## Evidence-seeking agent, gpt-oss-20b (`scripts/llm_agent.py`, after MedExAgent, arXiv 2605.07058)
 
-Zero-shot, untrained: before judging, the model calls search(query) (BM25 k1 0.9 b 0.4 over every sentence of the cited
+Not fine-tuned (few-shot prompt): before judging, the model calls search(query) (BM25 k1 0.9 b 0.4 over every sentence of the cited
 paper, top 5) and read(index) (index +-2), at most 8 calls, then answers with the improved prompt's JSON. Starts: `none`
 (citing text + paper title) and `top20` (also the MonoT5 top-20, numbered by position in the paper). Plan: LIMIT=20 speed
 check of both, dev for both, test once for the start chosen on dev. Data: data/agent (--prepare), bundle ci-carc-agent.tgz.

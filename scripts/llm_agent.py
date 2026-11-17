@@ -1,6 +1,6 @@
 """Evidence-seeking agent for the three-way test, after MedExAgent (Gao et al. 2026, arXiv 2605.07058).
 
-MedExAgent asks and examines before it diagnoses. Here gpt-oss-20b, zero-shot and untrained, searches the
+MedExAgent asks and examines before it diagnoses. Here gpt-oss-20b, prompted and not fine-tuned, searches the
 cited paper with two tools before it judges the citation, instead of only receiving a fixed MonoT5 top-20:
   search(query)  the SEARCH_K sentences of the cited paper that best match the query (BM25 over all of them)
   read(index)    sentences index-2 .. index+2, to see the qualifications around a sentence

@@ -14,7 +14,7 @@ papers, because citations of one paper share their evidence. Details and every c
    supplement.
 2. **Better retrieval does not help the classifier.** A stronger reranker (PubMedBERT) finds 12 points
    more of the gold evidence, but MultiVerS scores do not improve, frozen or retrained.
-3. **Zero-shot LLMs beat the paper's best model on NOT_ACCURATE.** gpt-oss-20b with our prompt raises
+3. **LLMs without fine-tuning beat the paper's best model on NOT_ACCURATE.** gpt-oss-20b with our prompt raises
    NOT_ACCURATE F1 from .431 to .545, with an interval that excludes zero. The paper reported GPT-4 at
    .09.
 4. **OVERSIMPLIFY stays unsolved.** Every method is near chance unless it is given only the
@@ -72,7 +72,7 @@ N_ACC F1 should therefore be read together with macro-F1 and AUC.
 | Qwen3.8-27B (thinking), our prompt | 0.635 | 0.514 | 0.528 | 0.755 |
 | MedGemma 27B (medical), our prompt | 0.540 | 0.466 | 0.472 | 0.625 |
 
-The LLMs are zero-shot and use no training data beyond eight train examples in the prompt. Our prompt
+The LLMs are not fine-tuned: they are prompted with eight train examples (few-shot prompting). Our prompt
 spells out the paper's annotation guidelines and gives one example per error type.
 
 Paired against the released checkpoint:
